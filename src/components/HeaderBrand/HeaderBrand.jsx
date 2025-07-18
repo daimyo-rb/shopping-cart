@@ -1,6 +1,10 @@
+import styles from "./HeaderBrand.module.css";
+
 function HeaderBrand() {
   return (
-    <h1>HeaderBrand</h1>
+    <div className={styles.container}>
+      <h1>HeaderBrand</h1>
+    </div>
   )
 }
 
