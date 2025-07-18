@@ -86,6 +86,7 @@ function ShopItem( { prodId, setCartCount } ) {
 
 ShopItem.propTypes = {
   prodId: PropTypes.string.isRequired,
+  setCartCount: PropTypes.func.isRequired,
 };
 
 export default ShopItem
