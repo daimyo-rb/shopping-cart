@@ -1,9 +1,23 @@
 import styles from "./Navbar.module.css";
+import { useLocation, Link } from "react-router-dom";
 
 function Navbar() {
+  const location = useLocation();
+
+  const isHomeActive  = location.pathname === "/";
+  const isShopActive  = location.pathname === "/shop";
+
   return (
     <div className={styles.container}>
-      <h1>Navbar</h1>
+      <ul className={styles.navList}>
+        <li className={isHomeActive ? styles.activeLink : ""}>
+          <Link to="/">Home</Link>
+        </li>
+        <li className={isShopActive ? styles.activeLink : ""}>
+          <Link to="/shop">Shop</Link>
+          </li>
+        <li>Cart</li>
+      </ul>
     </div>
   )
 }
