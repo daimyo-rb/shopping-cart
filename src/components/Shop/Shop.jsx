@@ -8,12 +8,12 @@ function Shop() {
     <>
       <h1>Items</h1>
       <div className={styles.container}>
-        <ShopItem prodId="1" setCartCart={setCartCount} />
-        <ShopItem prodId="2" setCartCart={setCartCount} />
-        <ShopItem prodId="3" setCartCart={setCartCount} />
-        <ShopItem prodId="4" setCartCart={setCartCount} />
-        <ShopItem prodId="5" setCartCart={setCartCount} />
-        <ShopItem prodId="6" setCartCart={setCartCount} />
+        <ShopItem prodId="1" setCartCount={setCartCount} />
+        <ShopItem prodId="2" setCartCount={setCartCount} />
+        <ShopItem prodId="3" setCartCount={setCartCount} />
+        <ShopItem prodId="4" setCartCount={setCartCount} />
+        <ShopItem prodId="5" setCartCount={setCartCount} />
+        <ShopItem prodId="6" setCartCount={setCartCount} />
       </div>
     </>
   )
