@@ -16,7 +16,7 @@ function Navbar() {
         <li className={isShopActive ? styles.activeLink : ""}>
           <Link to="/shop">Shop</Link>
           </li>
-        <li>Cart</li>
+        <li onClick={() => alert('Going to shopping cart')}>Cart</li>
       </ul>
     </div>
   )
