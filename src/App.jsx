@@ -1,13 +1,13 @@
-import { useState } from 'react'
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
+import Header from './components/Header';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <h1>home</h1>
-      <Link to="shop">Shop</Link>
+      <Header />
+      <div>
+        <Outlet />
+      </div>
     </>
   )
 }
