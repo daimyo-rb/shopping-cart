@@ -1,11 +1,11 @@
-import { vi, describe, it, expect } from "vitest";
+import { beforeEach, afterEach, vi, describe, it, expect } from "vitest";
 import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import ShopItem from "./ShopItem";
 
 describe("ShopItem component", () => {
   beforeEach(() => {
-    global.fetch = vi.fn(() =>
+    globalThis.fetch = vi.fn(() =>
       Promise.resolve({
         json: () =>
           Promise.resolve({

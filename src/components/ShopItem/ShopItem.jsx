@@ -18,7 +18,7 @@ function ShopItem( { prodId, setCartCount } ) {
         setItemName(json.title);
       })
       .catch(error=>console.log(error));
-  }, []);
+  }, [prodId]);
 
   function decrementQty() {
     setInputQty(prev => {
