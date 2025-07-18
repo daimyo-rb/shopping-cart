@@ -1,7 +1,7 @@
 import styles from "./ShopItem.module.css";
 import { useState, useEffect } from "react";
 
-function ShopItem( { prodId, setCartCart } ) {
+function ShopItem( { prodId, setCartCount } ) {
   const [imgUrl, setImgUrl] = useState('');
   const [price, setPrice] = useState(0);
   const [itemName, setItemName] = useState('');
@@ -43,7 +43,7 @@ function ShopItem( { prodId, setCartCart } ) {
   function handleSubmit(e) {
     e.preventDefault();
     const qty = Number(inputQty);
-    setCartCart(prev => prev + qty);
+    setCartCount(prev => prev + qty);
     setInputQty('1');
   }
 
