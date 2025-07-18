@@ -1,0 +1,19 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Home component > renders Home component correctly (snapshot) 1`] = `
+<DocumentFragment>
+  <div
+    class="_container_d6eec2"
+  >
+    <img
+      class="_heroImg_d6eec2"
+      src="https://images.unsplash.com/photo-1625214214702-e2d227cfa495?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    />
+    <p
+      class="_welcomeText_d6eec2"
+    >
+      Welcome to my store!
+    </p>
+  </div>
+</DocumentFragment>
+`;
