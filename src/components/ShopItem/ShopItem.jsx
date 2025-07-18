@@ -1,9 +1,30 @@
 import styles from "./ShopItem.module.css";
+import { useState, useEffect } from "react";
 
-function ShopItem() {
+function ShopItem( { prodId } ) {
+  const [imgUrl, setImgUrl] = useState('');
+  const [price, setPrice] = useState(0);
+  const [itemName, setItemName] = useState('');
+
+  useEffect(() => {
+    const apiStr = `https://fakestoreapi.com/products/${prodId}`;
+    console.log(apiStr);
+    fetch(apiStr)
+      .then(res => res.json())
+      .then(json => {
+        setImgUrl(json.image);
+        setPrice(json.price);
+        setItemName(json.title);
+        console.log(json);
+      })
+      .catch(error=>console.log(error));
+  }, []);
+
   return (
     <div className={styles.card}>
-      I'm a shop item
+      <img src={imgUrl}/>
+      <p className={styles.itemName}>{itemName}</p>
+      <p className={styles.price}>{price}</p>
     </div>
   )
 }

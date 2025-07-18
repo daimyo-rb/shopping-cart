@@ -7,11 +7,11 @@ function Shop() {
     <>
       <h1>Items</h1>
       <div className={styles.container}>
-        <ShopItem />
-        <ShopItem />
-        <ShopItem />
-        <ShopItem />
-        <ShopItem />
+        <ShopItem prodId="1" />
+        {/* <ShopItem prodId="2" />
+        <ShopItem prodId="3" />
+        <ShopItem prodId="4" />
+        <ShopItem prodId="5" /> */}
       </div>
     </>
   )
