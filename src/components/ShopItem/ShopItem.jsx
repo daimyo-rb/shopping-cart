@@ -23,8 +23,18 @@ function ShopItem( { prodId } ) {
   return (
     <div className={styles.card}>
       <img src={imgUrl}/>
-      <p className={styles.itemName}>{itemName}</p>
-      <p className={styles.price}>{price}</p>
+      <form className={styles.form}>
+        <p className={styles.itemName}>{itemName}</p>
+        <div className={styles.priceAndQty}>
+          <p className={styles.price}>{price}</p>
+          <div className={styles.qtyContainer}>
+            <button className={styles.qtyButton} type="button">-</button>
+            <input type="text" value={1} className={styles.qtyInput}></input>
+            <button className={styles.qtyButton} type="button">+</button>
+          </div>
+        </div>
+        <button className={styles.submitButton}>Add to Cart</button>
+      </form>
     </div>
   )
 }
