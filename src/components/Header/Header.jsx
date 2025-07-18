@@ -1,5 +1,5 @@
-import HeaderBrand from "./HeaderBrand";
-import Navbar from "./Navbar";
+import HeaderBrand from "../HeaderBrand/HeaderBrand";
+import Navbar from "../Navbar/Navbar";
 
 function Header() {
   return (
