@@ -1,7 +1,7 @@
 import styles from "./Navbar.module.css";
 import { useLocation, Link } from "react-router-dom";
 
-function Navbar() {
+function Navbar({ cartCount }) {
   const location = useLocation();
 
   const isHomeActive  = location.pathname === "/";
@@ -16,7 +16,7 @@ function Navbar() {
         <li className={isShopActive ? styles.activeLink : ""}>
           <Link to="/shop">Shop</Link>
           </li>
-        <li onClick={() => alert('Going to shopping cart')}>Cart</li>
+        <li onClick={() => alert('Going to shopping cart')}>Cart: {cartCount}</li>
       </ul>
     </div>
   )

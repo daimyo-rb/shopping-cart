@@ -1,7 +1,7 @@
 import styles from "./ShopItem.module.css";
 import { useState, useEffect } from "react";
 
-function ShopItem( { prodId } ) {
+function ShopItem( { prodId, setCartCart } ) {
   const [imgUrl, setImgUrl] = useState('');
   const [price, setPrice] = useState(0);
   const [itemName, setItemName] = useState('');
@@ -42,13 +42,14 @@ function ShopItem( { prodId } ) {
   }
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(`form submit with ${inputQty}`);
+    const qty = Number(inputQty);
+    setCartCart(prev => prev + qty);
     setInputQty('1');
   }
 
   return (
     <div className={styles.card}>
-      <img src={imgUrl}/>
+      {imgUrl && <img src={imgUrl}/>}
       <form className={styles.form} onSubmit={handleSubmit}>
         <p className={styles.itemName}>{itemName}</p>
         <div className={styles.priceAndQty}>

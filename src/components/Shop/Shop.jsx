@@ -1,13 +1,14 @@
 import styles from "./Shop.module.css";
-import { Link } from "react-router-dom";
+import { useOutletContext, Link } from "react-router-dom";
 import ShopItem from "../ShopItem/ShopItem";
 
 function Shop() {
+  const { setCartCount } = useOutletContext();
   return (
     <>
       <h1>Items</h1>
       <div className={styles.container}>
-        <ShopItem prodId="1" />
+        <ShopItem prodId="1" setCartCart={setCartCount} />
         {/* <ShopItem prodId="2" />
         <ShopItem prodId="3" />
         <ShopItem prodId="4" />

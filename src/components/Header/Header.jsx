@@ -2,11 +2,11 @@ import styles from './Header.module.css'
 import HeaderBrand from "../HeaderBrand/HeaderBrand";
 import Navbar from "../Navbar/Navbar";
 
-function Header() {
+function Header({ cartCount }) {
   return (
     <div className={styles.container}>
       <HeaderBrand />
-      <Navbar />
+      <Navbar cartCount={cartCount}/>
     </div>
   )
 }
