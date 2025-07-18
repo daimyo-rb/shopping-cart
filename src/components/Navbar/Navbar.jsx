@@ -1,5 +1,6 @@
 import styles from "./Navbar.module.css";
 import { useLocation, Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 function Navbar({ cartCount }) {
   const location = useLocation();
@@ -21,5 +22,9 @@ function Navbar({ cartCount }) {
     </div>
   )
 }
+
+Navbar.propTypes = {
+  cartCount: PropTypes.number.isRequired,
+};
 
 export default Navbar;

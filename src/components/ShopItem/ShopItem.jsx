@@ -1,5 +1,6 @@
 import styles from "./ShopItem.module.css";
 import { useState, useEffect } from "react";
+import PropTypes from 'prop-types';
 
 function ShopItem( { prodId, setCartCount } ) {
   const [imgUrl, setImgUrl] = useState('');
@@ -82,5 +83,10 @@ function ShopItem( { prodId, setCartCount } ) {
     </div>
   )
 }
+
+ShopItem.propTypes = {
+  prodId: PropTypes.string.isRequired,
+  setCartCount: PropTypes.func.isRequired,
+};
 
 export default ShopItem
