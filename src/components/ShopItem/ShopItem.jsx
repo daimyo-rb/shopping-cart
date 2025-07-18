@@ -9,14 +9,12 @@ function ShopItem( { prodId } ) {
 
   useEffect(() => {
     const apiStr = `https://fakestoreapi.com/products/${prodId}`;
-    console.log(apiStr);
     fetch(apiStr)
       .then(res => res.json())
       .then(json => {
         setImgUrl(json.image);
         setPrice(json.price);
         setItemName(json.title);
-        console.log(json);
       })
       .catch(error=>console.log(error));
   }, []);
